@@ -1,0 +1,91 @@
+Importar las librerias necesarias
+El root, es tu main
+
+Componentes (Funciones que son por asi decirlo, etiquetas de html o en si wdigets de flutter)
+- PascalCase, Requisito, no estandar. para evitar colisiones y posibles colisiones futuras con etiquetas html
+- No son funciones, llamalos como son lo que son, componentes.
+
+Componentes = funcion que devuelve un elemento
+elemento = pues lo que renderiza en el html
+
+Variables
+- camelCase
+
+Cadenas con variables
+- tag = `@${variable}`
+Con `` no con "" ''
+
+Es posible pasar funciones a los componentes
+- por ejemplo
+    
+    const funcionDeEjemplo = (parametro) => '@${parametro}'
+    <followCard name='Adam' function= {fincionDeEjemplo}>
+
+    -- En el followCard -- 
+    <h1>{funcionRecibira(name)}</h1>
+
+Es posible enviar elementos a los componentes
+- ejemplo
+    const titulo = <h1>Titulo papa</h1>
+
+    <TwitterCard elemento={titulo}></TwitterCard >
+
+    -- Dentro de TwitterCard --
+    function TwitterCard (tituloRecibido){
+        <div>
+            {tituloRecibido}
+        </div>
+    }
+
+--- Hijos de componentes ---
+- Los componentes tienen un atributo llamado children, que es lo que envuelve el elemento, es decir 
+    <TwitterCard>Hijo</TwitterCard>
+    Y hay que acceder a el agregandoel atributo (children) en el componente TwitterCard(name, user, children)
+
+    y children puede ser lo que sea y usarlo con {children}, podemos usar componentes dentro de componentes.
+
+
+--- Valores default ---
+funcion(userName = "unknown")
+
+--- Pasar objetos con sus atributos, Tratar de evitar ---
+<TwitterCard {... objeto}>
+objeto tiene que tener los mismos nombres que los del TwitterCard, osea los nombres de los atributo para que coincidan
+
+--- variables con posicion? ---
+const [var1, var2] = array; === var1 = array[0], var2 = array[1]
+
+--- Estados ---
+- Tambien llamados ¿hooks?
+- importar useState de react
+- useState("variable") devuelve un array, en la primera posicion esta el true o false por asi decirlo, y en la 2da esta la funcion que hace que cambie de estado.
+- El estado es unico de cada compoonente
+- Los estados no se propagan para abajo
+
+--- keys ---
+Las keys son el id de cada objeto de un arreglo, y cada uno debe de ser unico
+
+
+--------- MALAS PRACTICAS ---------
+    - Todos los props o "parametros" de los elementos, es decir, <TwitterCard name="adan">, deberian de ser inmutables, es decir, dentro de TwitterCard no deberia de modoficar directamente el name, en vez de modificarla deberia de usarla para crear otra variable
+    
+    - evita usar children como prop en una funcion o componente
+
+-------- Buenas practicas --------
+    - Lo mas Importar tratar de enviarlo mediante el children del elemento, es decir <h1>children</h1>
+    - todo prop que inicialize un estado, deberia de iniciar con un initial
+
+--- Como funciona React ---
+React solo vuelve a rednerizar lo que cambie
+
+Cuando el estado de un padre cambia, todos los hijos ligados se rendreizan de nuevo con el padre
+
+--- CSS ---
+Se pueden mezclar clases bien cura
+.estado1
+
+.estado1:hover .estado2
+
+.estado1:hover .estado2{
+    none
+}
