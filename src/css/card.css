@@ -1,0 +1,19 @@
+.card{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #141414;
+    padding: 20px;
+    
+    border-radius: 22px;
+    box-sizing: border-box;
+    
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    
+    width: auto;
+    height: auto;
+}

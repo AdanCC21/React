@@ -1,15 +1,26 @@
-body{
+body {
     margin: 0;
     background-color: rgb(31, 29, 29);
     color: white;
     font-family: "Poppins", serif;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
 
+.page-content{
+    position: absolute;
+    z-index: 1;
+    transform: translate(0,0);
+}
+
+.page-content.exit-right{
+    transition: all ease-in-out 0.2s;
+    transform: translate(100vw,0);
+}
+
+.page-content.exit-left{
+    transition: all ease-in-out 0.2s;
+    transform: translate(-100vw,0);
+}

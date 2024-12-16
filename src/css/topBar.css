@@ -1,0 +1,22 @@
+.top-bar{
+    position: absolute;
+    display: flex;
+    z-index: 5;
+    
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 60%;
+
+    font-weight: 600;
+    margin: 2vh 20%;
+}
+
+.top-bar a{
+    color: white;
+    cursor: pointer;
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
