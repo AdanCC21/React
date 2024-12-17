@@ -50,11 +50,18 @@
 
     justify-content: end;
     align-items: center;
+    
     width: 60%;
     height: 80%;
+    
     border-radius: 32px;
+    background-color: #9A4F19;
+    
+    transition: all ease-in-out 0.2s;
+}
 
-    background-color: rgb(0, 0, 0, 0.2);
+.experience-home :hover{
+    background-color: #9e5f33
 }
 
 .experience-item img {

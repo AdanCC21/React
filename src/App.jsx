@@ -7,6 +7,7 @@ import { TopBar } from "./components/TopBar";
 
 import './css/index.css'
 import './css/decoration.css'
+import { Projects } from "./Projects";
 
 export function App() {
 
@@ -55,11 +56,11 @@ export function App() {
         
         switch (page) {
             case 'home':
-                return <Home></Home>
+                return <Home/>
             case 'projects':
-                return <h1>Proyectos</h1>
+                return <Projects/>
             case 'experience':
-                return <Experience />
+                return <Experience/>
             case 'about me':
                 return <h1>sobre mi</h1>
             case 'editor':
