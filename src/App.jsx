@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
-import { TwitterCard } from "./components/TwitterCard";
 import { Home } from "./Home";
-import { Projects } from "./Projects"
+import { Experience } from "./Experience";
 import { TopBar } from "./components/TopBar";
 
 import './css/index.css'
@@ -58,9 +57,9 @@ export function App() {
             case 'home':
                 return <Home></Home>
             case 'projects':
-                return <Projects></Projects>
+                return <h1>Proyectos</h1>
             case 'experience':
-                return <h1>experience</h1>
+                return <Experience />
             case 'about me':
                 return <h1>sobre mi</h1>
             case 'editor':
@@ -75,6 +74,10 @@ export function App() {
             <TopBar currentPage={currentPage} setCurrentPage={handlePageChange} />
             <div className={`page-content ${currentClass}`}>
                 {changePage()}
+            </div>
+            <div className="general-page">
+                <img src="src/assets/cat-yes.gif"></img>
+                <h1>Ahi voy</h1>
             </div>
         </div>
     );
