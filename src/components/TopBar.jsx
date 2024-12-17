@@ -1,4 +1,4 @@
-import "./css/topBar.css"
+import "../css/topBar.css"
 
 export function TopBar({currentPage, setCurrentPage}){
     return (

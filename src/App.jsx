@@ -1,23 +1,24 @@
 import React from "react";
 import { useState } from "react";
 
-import { TwitterCard } from "./TwitterCard";
+import { TwitterCard } from "./components/TwitterCard";
 import { Home } from "./Home";
 import { Projects } from "./Projects"
-import { TopBar } from "./TopBar";
+import { TopBar } from "./components/TopBar";
 
 import './css/index.css'
+import './css/decoration.css'
 
 export function App() {
 
     let [currentPage, setCurrentPage] = useState(0);
     let [currentClass, setCurrentClass] = useState('');
 
-    let prevPage = currentPage;
-
     let topBarElements = ['home', 'projects', 'experience', 'about me', 'editor']
 
     const handlePageChange = (page) => {
+        let prevPage = currentPage;
+        
         // Movimiento
         if (page > prevPage) {
             // derecha
@@ -72,7 +73,6 @@ export function App() {
     return (
         <div>
             <TopBar currentPage={currentPage} setCurrentPage={handlePageChange} />
-
             <div className={`page-content ${currentClass}`}>
                 {changePage()}
             </div>

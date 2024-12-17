@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./css/TwitterCard.css"
+// import "./css/TwitterCard.css"
 
 export function TwitterCard({userName, tag, initialIsFollowing}){
     const tageo = `@${tag}`;

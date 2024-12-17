@@ -6,15 +6,16 @@
     justify-content: space-between;
     align-items: center;
     
-    width: 60%;
+    width: 40%;
 
     font-weight: 600;
-    margin: 2vh 20%;
+    margin: 2vh 30%;
 }
 
 .top-bar a{
     color: white;
     cursor: pointer;
+    font-size: 22px;
 }
 
 .top-bar a:hover {

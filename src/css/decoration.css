@@ -1,0 +1,49 @@
+.top-first{
+    position: absolute;
+    top: -1vh;
+    left: -2vw;
+    width: 25vw;
+    height: 5vh;
+    border-radius: 32px;
+    background-color: #c45e18
+}
+
+.top-second{
+    position: absolute;
+    top: -1vh;
+    left: -2vw;
+    width: 10vw;
+    height: 8vh;
+    border-radius: 32px;
+    background-color: #D98327
+}
+
+.top-third{
+    position: absolute;
+    top: -4vh;
+    left: -2vw;
+    width: 4vw;
+    height: 40vh;
+    border-radius: 32px;
+    background-color: #E7B962
+}
+
+.decoration-button{
+    position: absolute;
+    bottom: -2vh;
+    right: -2vw;
+    width: 55vw;
+    height: 5vh;
+    border-radius: 32px;
+    background-color: #c45e18
+}
+
+.bottom-second{
+    position: absolute;
+    bottom: 0vh;
+    right: -2vw;
+    width: 35vw;
+    height: 7vh;
+    border-radius: 32px;
+    background-color: #D98327
+}

@@ -1,18 +1,23 @@
-import { Card } from './Card'
+import { Card } from './components/Card'
+import { Decoration } from './components/Decoration'
 import './css/home.css'
 
 export function Home(){
     return(
-        <main className='homeContainer'>
-            <section className='basicInfo'>
-                <div className='profile'>
-                    <img src='src/assets/chillDog.jpg'></img>
-                </div>
-                <data className='name-profession' >
-                    <Card>Adan Gonzalez Ceseña</Card>
-                    <h3>Software and emerging technologies engineer</h3>
-                </data>
-            </section>
-        </main>
+        <div>
+            <Decoration/>
+            <main className='homeContainer'>
+                <section className='basicInfo'>
+                    <div className='profile'>
+                        <img src='src/assets/io-cat.png'></img>
+                    </div>
+                    <div className='name-profession' >
+                        <Card>Adan Gonzalez Ceseña</Card>
+                        <h3>Software and emerging technologies engineer</h3>
+                        <a className='download'>Download CV</a>
+                    </div>
+                </section>
+            </main>
+        </div>
     )
 }
