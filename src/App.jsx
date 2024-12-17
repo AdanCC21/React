@@ -9,13 +9,48 @@ import { TopBar } from "./TopBar";
 import './css/index.css'
 
 export function App() {
-    
-    let [currentPage, setCurrentPage] = useState(0);
-    let prevPage = currentPage;
-    
-    let topBarElements = ['home','projects','experience','about me','editor']
 
-    let changePage = () => {
+    let [currentPage, setCurrentPage] = useState(0);
+    let [currentClass, setCurrentClass] = useState('');
+
+    let prevPage = currentPage;
+
+    let topBarElements = ['home', 'projects', 'experience', 'about me', 'editor']
+
+    const handlePageChange = (page) => {
+        // Movimiento
+        if (page > prevPage) {
+            // derecha
+            setCurrentClass('exit-left')
+
+            setTimeout(() => {
+                setCurrentClass('right-zero');
+            }, 200);
+            
+            setTimeout(() => {
+                setCurrentClass('base');
+            }, 400);
+
+        } else if(page < prevPage) {
+            // Izquierda
+            setCurrentClass('exit-right')
+
+            setTimeout(() => {
+                setCurrentClass('left-zero');
+            }, 200);
+            
+            setTimeout(() => {
+                setCurrentClass('base');
+            }, 400);
+        }
+        
+        setTimeout(() => {
+            prevPage = page;
+            setCurrentPage(page);
+        }, 200);
+    };
+
+    const changePage = () => {
         let page = topBarElements[currentPage];
         
         switch (page) {
@@ -33,25 +68,12 @@ export function App() {
                 return <h1>No encontre nada</h1>
         }
     }
-    const handlePageChange = (page) => {
-        
-        if(page > prevPage){
-            console.log('derecha');
-            console.log('page '+ page +' prevPage '+ prevPage );
-            
-        }else{
-            console.log('izquierda');
-        }
-        prevPage = page;
-        setCurrentPage(page);
-
-    };
 
     return (
         <div>
             <TopBar currentPage={currentPage} setCurrentPage={handlePageChange} />
-            
-            <div className={`page-content ${currentPage}`}>
+
+            <div className={`page-content ${currentClass}`}>
                 {changePage()}
             </div>
         </div>

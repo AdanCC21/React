@@ -12,15 +12,34 @@ body {
 .page-content{
     position: absolute;
     z-index: 1;
-    transform: translate(0,0);
 }
 
+/* Posicionar en la esquina correspondiente */
+.page-content.left-zero{
+    opacity: 0;
+    transform: translate(-100vw,0);
+}
+
+.page-content.right-zero{
+    opacity: 0;
+    transform: translate(100vw,0);
+}
+
+/* mover al lado contrario */
 .page-content.exit-right{
-    transition: all ease-in-out 0.2s;
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
     transform: translate(100vw,0);
 }
 
 .page-content.exit-left{
-    transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.3s;
     transform: translate(-100vw,0);
+}
+
+/* Centrar */
+.page-content.base{
+    opacity: 1;
+    transform: translate(0,0);
+    transition: transform ease-in-out 0.3s;
 }
