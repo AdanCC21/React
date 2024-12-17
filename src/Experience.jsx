@@ -5,7 +5,7 @@ import './css/experience.css'
 export function Experience (){
     return(
         <div className='basic'>
-            <Decoration/>
+            <Decoration currentScreen={'experience'}/>
             <h3>I have experience using these</h3>
             <h1>languages, frameworks and softwares</h1>
             

@@ -1,8 +1,10 @@
 .basic h1 {
+    z-index: 2;
     margin: 0;
 }
 
 .basic h3 {
+    z-index: 2;
    margin: 0;
 }
 

@@ -5,7 +5,7 @@ import './css/home.css'
 export function Home(){
     return(
         <div>
-            <Decoration/>
+            <Decoration currentScreen={'home'}/>
             <main className='homeContainer'>
                 <section className='basicInfo'>
                     <div className='profile'>

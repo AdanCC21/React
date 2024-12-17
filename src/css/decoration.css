@@ -47,3 +47,39 @@
     border-radius: 32px;
     background-color: #D98327
 }
+
+.exp-circle-left{
+    z-index: 0;
+    position: absolute;
+    top:-10vh;
+    left: -20vw;
+    width: 65vw;
+    height: 65vw;
+    
+    border-radius: 50%;
+    background-color: #82391E
+}
+
+.exp-mini-circle-right{
+    z-index: 0;
+    position: absolute;
+    top:-30vh;
+    right: -10vw;
+    width: 25vw;
+    height: 25vw;
+    
+    border-radius: 50%;
+    background-color: #C0631F
+}
+
+.exp-circle-right{
+    position: absolute;
+    top:-10vh;
+    right: -8vw;
+    width: 15vw;
+    height: 15vw;
+    
+    
+    border-radius: 50%;
+    background-color: #C0631F
+}
