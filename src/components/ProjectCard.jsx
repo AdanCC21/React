@@ -1,4 +1,7 @@
-export function ProjectCard({imageName, title, description }) {
+import { useState } from "react"
+
+export function ProjectCard({imageName, title, description}) {
+
     return (
         <section className="current-project">
             <img src={`src/assets/project/${imageName}.png`}></img>

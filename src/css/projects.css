@@ -14,7 +14,7 @@
 .current-project{
     display: flex;
     
-    width: 60%;
+    width: 65%;
     height: 50%;
     justify-content: space-between;
     
@@ -27,6 +27,7 @@
     max-height: 80%;
     margin: auto;
     aspect-ratio: 1/1;
+    border-radius: 32px;
 }
 
 .current-project data{
@@ -43,20 +44,49 @@
 .current-project data h1{
     font-size: 62px;
     margin: 0;
+    text-align: center;
 }
 
 .current-project data p {
     margin: 0;
     font-size: 32px;
+    text-align: center;
 }
 
 .projects-list{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 50%;
-    
     height: 20%;
 
     
     border-radius: 32px;
     background-color: rgb(0,0,0,0.5);
+}
+
+.projects-list img{
+    height: 50%;
+    border-radius: 32px;
+    filter: blur(2px) ;
+    cursor: pointer;
+}
+
+.projects-list :first-child{
+    height: 20%;
+    filter: invert(100%) brightness(100%) blur(0);;
+}
+
+.projects-list :last-child{
+    height: 20%;
+    filter: invert(100%) brightness(100%) blur(0);;
+}
+
+.projects-list :nth-child(3){
+    height: 80%;
+    filter: blur(0px) drop-shadow(0 0 10px rgba(0, 0, 0, 0.308));
+}
+
+.projects-list button{
+    height: 30%;
 }
