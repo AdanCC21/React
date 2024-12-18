@@ -67,6 +67,7 @@
 .experience-item img {
     max-width: 40%;
     margin: auto;
+    background-color: none;
 }
 
 .experience-item h3{

@@ -23,9 +23,22 @@ body {
     height: 100vh;
 }
 
-.general-page img{
-    max-width: 30%;
-    max-height: 50%;
+.loading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.loading img{
+    width: 100px;
+}
+
+.loading h3{
+    text-align: center;
+    font-size: 24px;
 }
 
 .page-content{

@@ -4,12 +4,15 @@ import { ProjectCard } from "./components/ProjectCard";
 
 import './css/projects.css'
 
+const projects = ['cookingHub', 'pooyecto', 'petCare'];
+
 export function Projects(){
-    let projects = ['cookingHub', 'pooyecto', 'petCare'];
     let [previousProject, setPreviousProject] = useState(2);
     let [currentProject, setCurrentProject] = useState(0);
     let [nextProject, setNextProject] = useState(1);
+    
     let [title, setTitle] = useState('Cooking Hub');
+    
     let [description, setDescription] = useState('Una aplicacion de cocina para dispositivos moviles');
 
     const changeProject = (sense) =>{
@@ -76,9 +79,6 @@ export function Projects(){
             setDescription('Un juego sencillo de serpientes y escaleras para aplicaciones de escritorio');
         }
     }
-
-    console.log(projects[currentProject]);
-    console.log(currentProject)
 
     return (
         <div className="project-general">

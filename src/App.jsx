@@ -4,17 +4,20 @@ import { useState } from "react";
 import { Home } from "./Home";
 import { Experience } from "./Experience";
 import { TopBar } from "./components/TopBar";
+import { Projects } from "./Projects";
+import { LoadingGif } from "./components/Loading";
 
 import './css/index.css'
 import './css/decoration.css'
-import { Projects } from "./Projects";
+
+let topBarElements = ['home', 'projects', 'experience', 'about me', 'editor']
 
 export function App() {
 
     let [currentPage, setCurrentPage] = useState(0);
     let [currentClass, setCurrentClass] = useState('');
+    let [band, setBand] = useState(false);
 
-    let topBarElements = ['home', 'projects', 'experience', 'about me', 'editor']
 
     const handlePageChange = (page) => {
         let prevPage = currentPage;
@@ -49,6 +52,9 @@ export function App() {
             prevPage = page;
             setCurrentPage(page);
         }, 200);
+        
+        let tband = !band;
+        setBand(tband);
     };
 
     const changePage = () => {
@@ -77,8 +83,7 @@ export function App() {
                 {changePage()}
             </div>
             <div className="general-page">
-                <img src="src/assets/cat-yes.gif"></img>
-                <h1>Ahi voy</h1>
+                <LoadingGif bandera={band}></LoadingGif>
             </div>
         </div>
     );
